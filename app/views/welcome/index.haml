@@ -1,0 +1,19 @@
+%nav
+  %ul#navigation
+    %li
+      %a{:class => 'on', :href => '#home'} Home
+    %li
+      %a{:href => '#about'} About
+    %li
+      %a{:href => '#say-hi'} Work
+    %li
+      %a{:class => 'last', :href => '#say-hi'} Contact Me
+%header
+  .content
+    %h1
+      Well Hello.
+      %span
+        I'm Brian
+    = image_tag('intro-banner.png', :alt => 'The Work of Brian Bauer')
+%section#about
+  .header

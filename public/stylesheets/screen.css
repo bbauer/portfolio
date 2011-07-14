@@ -1,62 +1,127 @@
-body { font-family:sans-serif; padding:0; margin:0; font-size:12px; }
+/* ---------------[  Reset  ]--------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
 
-#wrapper { width:1000px; margin:0 auto; }
-header { 
-	display:block;
-	float: left;
-	width: 100%;
-	min-height: 854px;
-	height: auto !important;
-	height: 854px;
-	background: url(../images/ui-header-bg.png) 0 0 repeat-x #eeeeee;
-	padding:0; margin:0;
-}
-	header .content { 
-		width:1128px;
-		margin:0 auto;
-		background:url(../images/ui-header-tape.png) 0 0 no-repeat;
-		min-height:100px;
-	}
-	header h1 { 
-		font-family: 'Dancing Script', cursive; 
-		font-size:80px; text-align:center; 
-		color:#2e3639;
-		padding:100px 0 0 0; margin:0; 
-	}
-	header img { 
-		margin:-15px 0 0 -40px;
-	}
-nav ul { 
-	position:fixed;
-	top:16px; left:50%;
-	list-style:none; 
-	padding:10px 20px; margin:0;
-	margin-left:-180px;
-	text-align:center;
-	display:inline-block;
-	-webkit-border-radius:10px;
-  -moz-border-radius:10px;
-  -o-border-radius:10px;
-  border-radius:10px;
- 	background:rgba(194,194,194,.87);
-}
-nav li { display:inline; }
-nav li a { 
-	text-decoration:none; 
-	color:#444; 
-	font-weight:bold; 
-	text-shadow:1px 1px 0 #fff;
-	font-size:14px; padding:0 19px;
-}
-nav li a:hover { color:#888; }
-#about { 
-	float: left;
-	width: 100%;
-	min-height: 819px;
-	height: auto !important;
-	height: 819px; 
-	background:#123456;
-}
-footer { display:block; height:150px; background:#e6e6e6; padding:30px; text-align:center; clear:both; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-.show-say-hi { cursor:pointer; }
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+p, ol, ul {
+  list-style: none; }
+
+p, img {
+  padding: 0;
+  margin: 0; }
+
+caption, th {
+  text-align: left; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0; }
+
+/* ---------------[  Global  ]--------------- */
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 12px; }
+
+header, footer, aside, nav, section, article {
+  display: block; }
+
+/* ---------------[  Navigation  ]--------------- */
+nav ul {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  margin-left: -242px;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ee0d00), to(#c50b00));
+  background: -moz-linear-gradient(top, #ee0d00, #c50b00);
+  -moz-box-shadow: 1px 1px 3px #ccc;
+  -webkit-box-shadow: 1px 1px 3px #ccc;
+  box-shadow: 1px 1px 3px #ccc; }
+nav li {
+  float: left; }
+  nav li a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #ad0a00;
+    font-size: 14px;
+    padding: 10px 30px;
+    display: block;
+    float: left;
+    border-right: 1px solid #ee0d00; }
+  nav li a:hover, nav li .on {
+    background: #ee0d00; }
+nav .last {
+  border-right: none; }
+
+/* ---------------[  Header  ]--------------- */
+header {
+  float: left;
+  width: 100%;
+  min-height: 750px;
+  height: auto !important;
+  height: 750px;
+  background: url(../images/ui-header-bg-shorter.png) 0 0 repeat-x #eeeeee;
+  padding: 0;
+  margin: 0; }
+  header .content {
+    width: 1128px;
+    margin: 0 auto;
+    /*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
+    min-height: 100px; }
+  header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    text-align: center;
+    color: #2e3639;
+    padding: 100px 0 0 0;
+    margin: 0;
+    text-shadow: 1px 1px 0 #fff; }
+    header h1 span {
+      color: #999; }
+  header img {
+    margin: -15px 0 0 -40px; }
+
+/* ---------------[  About Panel  ]--------------- */
+#about {
+  float: left;
+  width: 100%;
+  min-height: 819px;
+  height: auto !important;
+  height: 819px;
+  background: #fff; }
+  #about .header {
+    width: 100%;
+    height: 100px;
+    background: #edeee8; }
+
+/* ---------------[  Footer  ]--------------- */
+footer {
+  height: 150px;
+  background: #e6e6e6;
+  padding: 30px;
+  text-align: center;
+  clear: both; }
