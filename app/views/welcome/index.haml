@@ -5,15 +5,55 @@
     %li
       %a{:href => '#about'} About
     %li
-      %a{:href => '#say-hi'} Work
+      %a{:href => '#work'} Work
     %li
-      %a{:class => 'last', :href => '#say-hi'} Contact Me
-%header
+      %a{:class => 'last', :href => '#contact_header'} Contact Me
+%header.panel
   .content
     %h1
       Well Hello.
       %span
         I'm Brian
     = image_tag('intro-banner.png', :alt => 'The Work of Brian Bauer')
-%section#about
+%section#about.panel
   .header
+  .content
+    %h2 
+      You Do What?
+    .abstract
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique hendrerit risus, ut lacinia risus sollicitudin sed. Cras ut condimentum leo. Ut ac justo turpis, eget lobortis libero. Phasellus elementum congue nunc. Phasellus interdum hendrerit neque ut placerat. 
+      %p Duis viverra euismod egestas. Morbi sed risus et urna sollicitudin ullamcorper a sit amet nisl. Quisque convallis hendrerit purus, ac faucibus arcu sollicitudin et. Etiam quis est ut mi tempor egestas. Aenean eu rhoncus turpis. Etiam lacus lectus, hendrerit sed laoreet sit amet, rutrum in velit. 
+%section#work.panel
+  .content
+    - @articles.each do |article|
+      #articles
+        %article
+          %a{:class => "view", :href => ""}
+            View Screenshot
+          = image_tag("#{article.thumb.blank? ? "/images/work-blank-thumb.png" : article.thumb}", :alt => "#{article.title}")
+          %h3 
+            = article.title
+            %br/
+            %a{:href => "#{article.url}"}
+              View Project
+          .icons
+            - if article.rails == "yes"
+              .icon.ruby
+            - if article.php == "yes"
+              .icon.php
+            - if article.asp == "yes"
+              .icon.asp
+            - if article.css3 == "yes"
+              .icon.css
+            - if article.html5 == "yes"
+              .icon.html
+            - if article.haml == "yes"
+              .icon.haml
+            - if article.sass == "yes"
+              .icon.sass
+            - if article.jquery == "yes"
+              .icon.jquery
+            - if article.mootools == "yes"
+              .icon.mootools
+#contact_header
+%section#contact.panel

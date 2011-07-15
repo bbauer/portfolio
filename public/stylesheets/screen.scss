@@ -16,8 +16,10 @@ abbr,acronym {border:0;}
 body { 
 	font-family:sans-serif; 
 	padding:0; margin:0; 
-	font-size:12px; 
+	font-size:12px;
+	background:#000;
 }
+a, img { border:none; }
 header, footer, aside, nav, section, article { display:block; }
 
 /* ---------------[  Navigation  ]--------------- */
@@ -25,6 +27,7 @@ header, footer, aside, nav, section, article { display:block; }
 nav {
 	ul { 
 		position:fixed;
+		z-index:999;
 		top:30px; left:50%;
 		list-style:none; 
 		padding:0 10px; margin:0;
@@ -58,26 +61,47 @@ nav {
 	.last { border-right:none; }
 }
 
+/* ---------------[  Generic Panel  ]--------------- */
+
+.panel {
+	float: left;
+	width: 100%;
+	.content { 
+		width:1128px;
+		margin:0 auto;
+		/*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
+		min-height:100px;
+		p {
+			line-height:24px;
+			font-size:15px;
+		}
+		h2, p {
+			margin:0 0 15px 0;
+			padding:0;
+		}
+	}
+	a {
+		color:#ed0e00;
+		text-decoration:none;
+	}
+	a:hover { text-decoration:underline; }
+}
+
 /* ---------------[  Header  ]--------------- */
 
 header { 
-	float: left;
-	width: 100%;
 	min-height: 750px;
 	height: auto !important;
 	height: 750px;
 	background: url(../images/ui-header-bg-shorter.png) 0 0 repeat-x #eeeeee;
 	padding:0; margin:0;
 	.content { 
-		width:1128px;
-		margin:0 auto;
 		/*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
-		min-height:100px;
 	}
 	h1 { 
 		font-family: 'Dancing Script', cursive; 
 		font-size:80px; text-align:center; 
-		color:#2e3639;
+		color:#111;
 		padding:100px 0 0 0; margin:0; 
 		text-shadow:1px 1px 0 #fff;
 		span { 
@@ -90,26 +114,134 @@ header {
 /* ---------------[  About Panel  ]--------------- */
 	
 #about { 
-	float: left;
-	width: 100%;
-	min-height: 819px;
-	height: auto !important;
-	height: 819px; 
 	background:#fff;
-	.header{
+	padding-bottom:50px;
+	border-bottom:1px solid #d6d6d6;
+	.header {
 		width:100%; height:100px;
 		background:#edeee8;
+		margin-bottom:20px;
+		border-bottom:1px solid #d6d6d6;
 	}
+	h2 {
+		font-family: 'Terminal Dosis Light', sans-serif;
+		font-size:100px;
+		float:left;
+		color:#222;
+		margin-top:50px;
+	}
+	.abstract {
+		font-family: 'Terminal Dosis Light', sans-serif;
+		width:500px;
+		float:right;
+		padding-left:40px;
+		margin-top:28px;
+	}
+}
+
+/* ---------------[  Work Panel  ]--------------- */
+	
+#work { 
+	background:#e6e6e6;
+	.content {
+		padding:120px 0 50px 0;
+	}
+	#articles {
+		width:1153px;
+		margin-left:-25px;
+	}
+	article {
+		width:204px;
+		height:210px;
+		float:left;
+		margin:0 25px 25px 0;
+		position:relative;
+		.view {
+			width:144px;
+			height:80px;
+			position:absolute;
+			top:0; left:0;
+			text-indent:-9999px;
+			color:#ddd;
+			text-decoration:none;
+			padding:70px 0 0 60px;
+		}
+		.view:hover {
+			background:rgba(0, 0, 0, .5);
+			text-indent:0;
+		}
+		img {
+			background:#d6d6d6;
+			width:204px;
+			height:150px;
+		}
+		h3 {
+			font-family:sans-serif;
+			font-size:13px;
+			margin-top:15px;
+			cursor:pointer;
+			font-weight:500;
+			text-shadow:1px 1px 0 #fff;
+			color:#666;
+			line-height:16px;
+			float:left;
+			a { font-size:12px; }
+		}
+		.icons {
+			float:right;
+			width:110px;
+			margin:19px 0 0 0;
+		}
+		.icon {
+			-webkit-border-radius:8px;
+		  -moz-border-radius:8px;
+		  -o-border-radius:8px;
+		  border-radius:8px;
+		  height:9px; width:9px;
+		  background:#ed0e00;
+		  float:right;
+		  margin-left:6px;
+		}
+		.ruby { background:#f31400; }
+		.php { background:#f31400; }
+		.asp { background:#f31400; }
+		.css { background:#00bcf1; }
+		.html { background:#000; }
+		.jquery { background:#646464; }
+		.mootools { background:#f31400; }
+		.haml { background:#67f200; }
+		.sass { background:#f200c2; }
+	}
+	.last { margin-right:0; }
+}
+
+/* ---------------[  Contact Panel  ]--------------- */
+
+#contact_header {
+	width:100%; height:100px;
+	background:#e6e6e6;
+	clear:both;
+}
+	
+#contact { 
+	background:#fff;
+	padding:100px 0 50px 0;
+	min-height:200px;
+	background:#161616;
+	clear:both;
 }
 
 /* ---------------[  Footer  ]--------------- */
 
 footer {  
-	height:150px; 
-	background:#e6e6e6; 
-	padding:30px; 
+	min-height:450px; 
+	padding:30px 0; 
 	text-align:center; 
 	clear:both; 
+	color:#fff;
+	.content {
+		padding:40px 0;
+	}
 }
 
 

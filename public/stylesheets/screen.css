@@ -35,7 +35,11 @@ body {
   font-family: sans-serif;
   padding: 0;
   margin: 0;
-  font-size: 12px; }
+  font-size: 12px;
+  background: #000; }
+
+a, img {
+  border: none; }
 
 header, footer, aside, nav, section, article {
   display: block; }
@@ -43,6 +47,7 @@ header, footer, aside, nav, section, article {
 /* ---------------[  Navigation  ]--------------- */
 nav ul {
   position: fixed;
+  z-index: 999;
   top: 30px;
   left: 50%;
   list-style: none;
@@ -77,10 +82,29 @@ nav li {
 nav .last {
   border-right: none; }
 
+/* ---------------[  Generic Panel  ]--------------- */
+.panel {
+  float: left;
+  width: 100%; }
+  .panel .content {
+    width: 1128px;
+    margin: 0 auto;
+    /*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
+    min-height: 100px; }
+    .panel .content p {
+      line-height: 24px;
+      font-size: 15px; }
+    .panel .content h2, .panel .content p {
+      margin: 0 0 15px 0;
+      padding: 0; }
+  .panel a {
+    color: #ed0e00;
+    text-decoration: none; }
+  .panel a:hover {
+    text-decoration: underline; }
+
 /* ---------------[  Header  ]--------------- */
 header {
-  float: left;
-  width: 100%;
   min-height: 750px;
   height: auto !important;
   height: 750px;
@@ -88,15 +112,12 @@ header {
   padding: 0;
   margin: 0; }
   header .content {
-    width: 1128px;
-    margin: 0 auto;
-    /*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
-    min-height: 100px; }
+    /*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/ }
   header h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 80px;
     text-align: center;
-    color: #2e3639;
+    color: #111;
     padding: 100px 0 0 0;
     margin: 0;
     text-shadow: 1px 1px 0 #fff; }
@@ -107,21 +128,126 @@ header {
 
 /* ---------------[  About Panel  ]--------------- */
 #about {
-  float: left;
-  width: 100%;
-  min-height: 819px;
-  height: auto !important;
-  height: 819px;
-  background: #fff; }
+  background: #fff;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #d6d6d6; }
   #about .header {
     width: 100%;
     height: 100px;
-    background: #edeee8; }
+    background: #edeee8;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d6d6d6; }
+  #about h2 {
+    font-family: 'Terminal Dosis Light', sans-serif;
+    font-size: 100px;
+    float: left;
+    color: #222;
+    margin-top: 50px; }
+  #about .abstract {
+    font-family: 'Terminal Dosis Light', sans-serif;
+    width: 500px;
+    float: right;
+    padding-left: 40px;
+    margin-top: 28px; }
+
+/* ---------------[  Work Panel  ]--------------- */
+#work {
+  background: #e6e6e6; }
+  #work .content {
+    padding: 120px 0 50px 0; }
+  #work #articles {
+    width: 1153px;
+    margin-left: -25px; }
+  #work article {
+    width: 204px;
+    height: 210px;
+    float: left;
+    margin: 0 25px 25px 0;
+    position: relative; }
+    #work article .view {
+      width: 144px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-indent: -9999px;
+      color: #ddd;
+      text-decoration: none;
+      padding: 70px 0 0 60px; }
+    #work article .view:hover {
+      background: rgba(0, 0, 0, 0.5);
+      text-indent: 0; }
+    #work article img {
+      background: #d6d6d6;
+      width: 204px;
+      height: 150px; }
+    #work article h3 {
+      font-family: sans-serif;
+      font-size: 13px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: 500;
+      text-shadow: 1px 1px 0 #fff;
+      color: #666;
+      line-height: 16px;
+      float: left; }
+      #work article h3 a {
+        font-size: 12px; }
+    #work article .icons {
+      float: right;
+      width: 110px;
+      margin: 19px 0 0 0; }
+    #work article .icon {
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -o-border-radius: 8px;
+      border-radius: 8px;
+      height: 9px;
+      width: 9px;
+      background: #ed0e00;
+      float: right;
+      margin-left: 6px; }
+    #work article .ruby {
+      background: #f31400; }
+    #work article .php {
+      background: #f31400; }
+    #work article .asp {
+      background: #f31400; }
+    #work article .css {
+      background: #00bcf1; }
+    #work article .html {
+      background: #000; }
+    #work article .jquery {
+      background: #646464; }
+    #work article .mootools {
+      background: #f31400; }
+    #work article .haml {
+      background: #67f200; }
+    #work article .sass {
+      background: #f200c2; }
+  #work .last {
+    margin-right: 0; }
+
+/* ---------------[  Contact Panel  ]--------------- */
+#contact_header {
+  width: 100%;
+  height: 100px;
+  background: #e6e6e6;
+  clear: both; }
+
+#contact {
+  background: #fff;
+  padding: 100px 0 50px 0;
+  min-height: 200px;
+  background: #161616;
+  clear: both; }
 
 /* ---------------[  Footer  ]--------------- */
 footer {
-  height: 150px;
-  background: #e6e6e6;
-  padding: 30px;
+  min-height: 450px;
+  padding: 30px 0;
   text-align: center;
-  clear: both; }
+  clear: both;
+  color: #fff; }
+  footer .content {
+    padding: 40px 0; }
