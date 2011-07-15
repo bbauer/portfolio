@@ -19,16 +19,19 @@
   .header
   .content
     %h2 
-      You Do What?
+      This is What I Do
+    = image_tag('ui-about.png', :alt => 'Design + Code = Awesome!')
     .abstract
       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique hendrerit risus, ut lacinia risus sollicitudin sed. Cras ut condimentum leo. Ut ac justo turpis, eget lobortis libero. Phasellus elementum congue nunc. Phasellus interdum hendrerit neque ut placerat. 
       %p Duis viverra euismod egestas. Morbi sed risus et urna sollicitudin ullamcorper a sit amet nisl. Quisque convallis hendrerit purus, ac faucibus arcu sollicitudin et. Etiam quis est ut mi tempor egestas. Aenean eu rhoncus turpis. Etiam lacus lectus, hendrerit sed laoreet sit amet, rutrum in velit. 
 %section#work.panel
+  .header
   .content
+    %h2 The Work
     - @articles.each do |article|
       #articles
         %article
-          %a{:class => "view", :href => ""}
+          %a{:class => "view", :href => "/images/#{article.screenshot}", :rel => "shadowbox"}
             View Screenshot
           = image_tag("#{article.thumb.blank? ? "/images/work-blank-thumb.png" : article.thumb}", :alt => "#{article.title}")
           %h3 
