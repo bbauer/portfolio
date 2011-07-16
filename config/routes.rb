@@ -5,6 +5,7 @@ Brianbauer::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   root :to => "welcome#index"
+  match '/email' => 'welcome#send_mail'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

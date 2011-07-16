@@ -297,21 +297,54 @@ header {
   clear: both; }
 
 #contact {
-  background: #fff;
-  padding: 100px 0 50px 0;
+  padding: 60px 0 50px 0;
   min-height: 200px;
   background: #161616;
-  clear: both; }
+  clear: both;
+  color: #eee;
+  font-weight: bold;
+  font-size: 14px; }
+  #contact form {
+    width: 550px;
+    float: right;
+    padding: 0 0 20px 40px;
+    margin-top: 15px; }
+  #contact label, #contact input, #contact textarea {
+    margin-bottom: 12px; }
+  #contact label {
+    width: 120px;
+    float: left;
+    display: block; }
+  #contact input[type="text"], #contact textarea {
+    padding: 8px 10px;
+    border: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    float: left;
+    width: 400px; }
+  #contact textarea {
+    width: 520px; }
+  #contact input[type="submit"] {
+    clear: both; }
+  #contact br {
+    clear: both; }
+  #contact h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    float: left; }
 
 /* ---------------[  Footer  ]--------------- */
 footer {
   min-height: 450px;
-  padding: 30px 0;
+  padding: 10px 0;
   text-align: center;
   clear: both;
-  color: #fff; }
+  color: #333;
+  font-weight: normal; }
   footer .content {
-    padding: 40px 0; }
+    padding: 20px 0; }
 
 /* ---------------[  Shadowbox  ]--------------- */
 #sb-title-inner, #sb-info-inner, #sb-loading-inner, div.sb-message {
