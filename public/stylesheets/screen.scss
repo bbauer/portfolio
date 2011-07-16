@@ -50,8 +50,8 @@ nav {
 	  -o-border-radius:10px;
 	  border-radius:10px;
 	  background:#ee0d00;
-		background: -webkit-gradient(linear, left top, left bottom, from(#ee0d00), to(#c50b00));
-	  background: -moz-linear-gradient(top, #ee0d00, #c50b00);
+		background: -webkit-gradient(linear, left top, left bottom, from(#ee0d00), to(#ac1e12));
+	  background: -moz-linear-gradient(top, #ee0d00, #ac1e12);
 		// -moz-box-shadow: 1px 1px 3px #ccc;
 		// 	  -webkit-box-shadow: 1px 1px 3px #ccc;
 		// 	  box-shadow: 1px 1px 3px #ccc;
@@ -258,14 +258,16 @@ header {
 		  -moz-border-radius:8px;
 		  -o-border-radius:8px;
 		  border-radius:8px;
-			padding:2px 0;
-			width:107px;
-			float:left;
+		  -moz-box-shadow: 1px 1px 3px #ccc;
+			-webkit-box-shadow: 1px 1px 3px #ccc;
+			box-shadow: 1px 1px 3px #ccc;
+			padding:7px 14px 7px 16px;
+			display:inline;
 			margin-right:6px;
 			color:#fff;
 			font-weight:bold;
 			text-align:center;
-			font-size:12px;
+			font-size:11px;
 		}
 		.last { margin-left:none;}
 		.title { 
@@ -275,15 +277,60 @@ header {
 		  background: -moz-linear-gradient(top, #ccc, #aaa);
 		}
 	}
-	.ruby { background:#ef2716; }
-	.php { background:#5cc052; }
-	.asp { background:#f5a804; }
-	.css { background:#5accec; }
-	.html { background:#333; }
-	.jquery { background:#646464; }
-	.mootools { background:#5f95a4; }
-	.haml { background:#82e03d; }
-	.sass { background:#eb56cd; }
+	.ruby { 
+		background:#ef2716; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#ef2716), to(#ac1e12));
+	  background: -moz-linear-gradient(top, #ef2716, #ac1e12);
+	  text-shadow:-1px -1px 0 #8f190f;
+	}
+	.php { 
+		background:#5cc052; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#5cc052), to(#448d3c));
+	  background: -moz-linear-gradient(top, #5cc052, #448d3c);
+	  text-shadow:-1px -1px 0 #397632;
+	}
+	.asp { 
+		background:#f5a804; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#f5a804), to(#c38603));
+	  background: -moz-linear-gradient(top, #f5a804, #c38603);
+	  text-shadow:-1px -1px 0 #a97403;
+	}
+	.css { 
+		background:#5accec; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#5accec), to(#48a2bc));
+	  background: -moz-linear-gradient(top, #5accec, #48a2bc);
+	  text-shadow:-1px -1px 0 #3c8aa0;
+	}
+	.html { 
+		background:#333; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#111));
+	  background: -moz-linear-gradient(top, #333, #111);
+	  text-shadow:-1px -1px 0 #000;
+	}
+	.jquery { 
+		background:#646464; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#646464), to(#444));
+	  background: -moz-linear-gradient(top, #646464, #444);
+	  text-shadow:-1px -1px 0 #222;
+	}
+	.mootools { 
+		background:#5f95a4; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#5f95a4), to(#426771));
+	  background: -moz-linear-gradient(top, #5f95a4, #426771);
+	  text-shadow:-1px -1px 0 #314c54;
+	}
+	.haml { 
+		background:#82e03d; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#82e03d), to(#65ad2f));
+	  background: -moz-linear-gradient(top, #82e03d, #65ad2f);
+	  text-shadow:-1px -1px 0 #508926;
+	}
+	.sass { 
+		background:#eb56cd; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#eb56cd), to(#b1419b));
+	  background: -moz-linear-gradient(top, #eb56cd, #b1419b);
+	  text-shadow:-1px -1px 0 #92357f;
+	}
 }
 
 /* ---------------[  Contact Panel  ]--------------- */
