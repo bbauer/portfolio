@@ -44,13 +44,13 @@ a, img {
 
 em {
   padding: 2px 5px;
-  background: #f9fc02;
+  background: #3d93b6;
   font-style: normal;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  color: #444; }
+  color: #fff; }
 
 header, footer, aside, nav, section, article {
   display: block; }
@@ -107,7 +107,7 @@ nav .last {
       margin: 0 0 15px 0;
       padding: 0; }
   .panel a {
-    color: #ed0e00;
+    color: #db2a01;
     text-decoration: none; }
   .panel a:hover {
     text-decoration: underline; }
