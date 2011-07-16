@@ -22,14 +22,29 @@
       This is What I Do
     = image_tag('ui-about.png', :alt => 'Design + Code = Awesome!')
     .abstract
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique hendrerit risus, ut lacinia risus sollicitudin sed. Cras ut condimentum leo. Ut ac justo turpis, eget lobortis libero. Phasellus elementum congue nunc. Phasellus interdum hendrerit neque ut placerat. 
-      %p Duis viverra euismod egestas. Morbi sed risus et urna sollicitudin ullamcorper a sit amet nisl. Quisque convallis hendrerit purus, ac faucibus arcu sollicitudin et. Etiam quis est ut mi tempor egestas. Aenean eu rhoncus turpis. Etiam lacus lectus, hendrerit sed laoreet sit amet, rutrum in velit. 
+      %p 
+        %strong I'm Brian Bauer
+      %p 
+        I'm a designer and 
+        %em Ruby on Rails 
+        developer striving to create beautiful user-interfaces backed by beautiful code.  I try to sneak in
+        %em HTML5
+        and
+        %em CSS3
+        in when possible and love working with
+        %em SASS
+        and
+        %em HAML.
+      %ul
+        %li 503-360-7651
+        %li
+          %a{:href => "#contact"} Get in touch
 %section#work.panel
   .header
   .content
     %h2 The Work
-    - @articles.each do |article|
-      #articles
+    #articles
+      - @articles.each do |article|
         %article
           %a{:class => "view", :href => "/images/#{article.screenshot}", :rel => "shadowbox"}
             View Screenshot
@@ -40,23 +55,27 @@
             %a{:href => "#{article.url}"}
               View Project
           .icons
-            - if article.rails == "yes"
-              .icon.ruby
-            - if article.php == "yes"
-              .icon.php
-            - if article.asp == "yes"
-              .icon.asp
-            - if article.css3 == "yes"
-              .icon.css
-            - if article.html5 == "yes"
-              .icon.html
-            - if article.haml == "yes"
-              .icon.haml
-            - if article.sass == "yes"
-              .icon.sass
-            - if article.jquery == "yes"
-              .icon.jquery
-            - if article.mootools == "yes"
-              .icon.mootools
+            - icons(article).each do |icon|
+              %div{:class => "icon #{icon}"}
+    %ul
+      %li.title Technology:
+      %li.ruby
+        Ruby/Rails
+      %li.css
+        CSS3
+      %li.sass
+        SASS
+      %li.html
+        HTML5
+      %li.haml
+        HAML
+      %li.jquery
+        jQuery
+      %li.mootools
+        MooTools
+      %li.php
+        PHP
+      %li.asp.last
+        ASP
 #contact_header
 %section#contact.panel

@@ -42,6 +42,16 @@ body {
 a, img {
   border: none; }
 
+em {
+  padding: 2px 5px;
+  background: #f9fc02;
+  font-style: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #444; }
+
 header, footer, aside, nav, section, article {
   display: block; }
 
@@ -90,7 +100,7 @@ nav .last {
     margin: 0 auto;
     /*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
     min-height: 100px; }
-    .panel .content p {
+    .panel .content p, .panel .content ul {
       line-height: 24px;
       font-size: 15px; }
     .panel .content h2, .panel .content p {
@@ -139,6 +149,8 @@ header {
   #about .content {
     position: relative;
     padding-top: 20px; }
+    #about .content p {
+      line-height: 28px; }
   #about h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
@@ -153,9 +165,9 @@ header {
     font-family: sans-serif;
     width: 540px;
     float: right;
-    padding-left: 40px;
+    padding: 0 0 20px 40px;
     margin-top: 45px;
-    color: #666; }
+    color: #555; }
 
 /* ---------------[  Work Panel  ]--------------- */
 #work {
@@ -177,7 +189,10 @@ header {
     text-shadow: 1px 1px 0 #fff; }
   #work #articles {
     width: 1153px;
-    margin-left: 0; }
+    margin-left: 0;
+    float: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d6d6d6; }
   #work article {
     width: 204px;
     height: 210px;
@@ -213,40 +228,65 @@ header {
       float: left; }
       #work article h3 a {
         font-size: 12px; }
-    #work article .icons {
-      float: right;
-      width: 110px;
-      margin: 19px 0 0 0; }
-    #work article .icon {
+  #work .icons {
+    float: right;
+    width: 110px;
+    margin: 19px 0 0 0; }
+  #work .icon {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    height: 9px;
+    width: 9px;
+    background: #ed0e00;
+    float: right;
+    margin-left: 6px; }
+  #work .last {
+    margin-right: 0; }
+  #work ul {
+    margin: 0;
+    padding: 35px 0 0 0;
+    border-top: 1px solid #fff;
+    text-align: center;
+    clear: both; }
+    #work ul li {
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       -o-border-radius: 8px;
       border-radius: 8px;
-      height: 9px;
-      width: 9px;
-      background: #ed0e00;
-      float: right;
-      margin-left: 6px; }
-    #work article .ruby {
-      background: #f31400; }
-    #work article .php {
-      background: #f31400; }
-    #work article .asp {
-      background: #f31400; }
-    #work article .css {
-      background: #00bcf1; }
-    #work article .html {
-      background: #000; }
-    #work article .jquery {
-      background: #646464; }
-    #work article .mootools {
-      background: #f31400; }
-    #work article .haml {
-      background: #67f200; }
-    #work article .sass {
-      background: #f200c2; }
-  #work .last {
-    margin-right: 0; }
+      padding: 5px 0;
+      width: 107px;
+      float: left;
+      margin-right: 6px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center; }
+    #work ul .last {
+      margin-left: none; }
+    #work ul .title {
+      color: #444;
+      text-shadow: 1px 1px 0 #e6e6e6;
+      background: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#aaaaaa));
+      background: -moz-linear-gradient(top, #cccccc, #aaaaaa); }
+  #work .ruby {
+    background: #ef2716; }
+  #work .php {
+    background: #5cc052; }
+  #work .asp {
+    background: #f5a804; }
+  #work .css {
+    background: #5accec; }
+  #work .html {
+    background: #333; }
+  #work .jquery {
+    background: #646464; }
+  #work .mootools {
+    background: #5f95a4; }
+  #work .haml {
+    background: #82e03d; }
+  #work .sass {
+    background: #eb56cd; }
 
 /* ---------------[  Contact Panel  ]--------------- */
 #contact_header {

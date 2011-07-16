@@ -21,6 +21,16 @@ body {
 	color:#111;
 }
 a, img { border:none; }
+em { 
+	padding:2px 5px; 
+	background:#f9fc02; 
+	font-style:normal;
+	-webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;
+  color:#444;
+}
 header, footer, aside, nav, section, article { display:block; }
 
 /* ---------------[  Navigation  ]--------------- */
@@ -73,7 +83,7 @@ nav {
 		margin:0 auto;
 		/*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
 		min-height:100px;
-		p {
+		p, ul {
 			line-height:24px;
 			font-size:15px;
 		}
@@ -128,6 +138,9 @@ header {
 	.content { 
 		position:relative; 
 		padding-top:20px;
+		p {
+			line-height:28px;
+		}
 	}
 	h2 {
 		font-family: 'Dancing Script', cursive;
@@ -144,9 +157,9 @@ header {
 		font-family:sans-serif;
 		width:540px;
 		float:right;
-		padding-left:40px;
+		padding:0 0 20px 40px;
 		margin-top:45px;
-		color:#666;
+		color:#555;
 	}
 }
 
@@ -174,6 +187,9 @@ header {
 	#articles {
 		width:1153px;
 		margin-left:0;
+		float:left;
+		padding-bottom:20px;
+		border-bottom:1px solid #d6d6d6;
 	}
 	article {
 		width:204px;
@@ -212,32 +228,61 @@ header {
 			float:left;
 			a { font-size:12px; }
 		}
-		.icons {
-			float:right;
-			width:110px;
-			margin:19px 0 0 0;
-		}
-		.icon {
+	}
+	.icons {
+		float:right;
+		width:110px;
+		margin:19px 0 0 0;
+	}
+	.icon {
+		-webkit-border-radius:8px;
+	  -moz-border-radius:8px;
+	  -o-border-radius:8px;
+	  border-radius:8px;
+	  height:9px; width:9px;
+	  background:#ed0e00;
+	  float:right;
+	  margin-left:6px;
+	}
+	.last { 
+		margin-right:0; 
+	}
+	ul {
+    margin:0;
+		padding:35px 0 0 0;
+		border-top:1px solid #fff;
+		text-align:center;
+		clear:both;
+		li {
 			-webkit-border-radius:8px;
 		  -moz-border-radius:8px;
 		  -o-border-radius:8px;
 		  border-radius:8px;
-		  height:9px; width:9px;
-		  background:#ed0e00;
-		  float:right;
-		  margin-left:6px;
+			padding:5px 0;
+			width:107px;
+			float:left;
+			margin-right:6px;
+			color:#fff;
+			font-weight:bold;
+			text-align:center;
 		}
-		.ruby { background:#f31400; }
-		.php { background:#f31400; }
-		.asp { background:#f31400; }
-		.css { background:#00bcf1; }
-		.html { background:#000; }
-		.jquery { background:#646464; }
-		.mootools { background:#f31400; }
-		.haml { background:#67f200; }
-		.sass { background:#f200c2; }
+		.last { margin-left:none;}
+		.title { 
+			color:#444;
+			text-shadow:1px 1px 0 #e6e6e6; 
+			background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#aaa));
+		  background: -moz-linear-gradient(top, #ccc, #aaa);
+		}
 	}
-	.last { margin-right:0; }
+	.ruby { background:#ef2716; }
+	.php { background:#5cc052; }
+	.asp { background:#f5a804; }
+	.css { background:#5accec; }
+	.html { background:#333; }
+	.jquery { background:#646464; }
+	.mootools { background:#5f95a4; }
+	.haml { background:#82e03d; }
+	.sass { background:#eb56cd; }
 }
 
 /* ---------------[  Contact Panel  ]--------------- */

@@ -10,7 +10,7 @@
     %script{:type => "text/javascript", :src  => "/javascripts/shadowbox.js"}
     :javascript
       $(document).ready(function(){
-        $('#navigation').localScroll({ duration:300 });
+        $('#navigation, #about').localScroll({ duration:300 });
         $('#navigation a').click(function(){
           $('#navigation a').removeClass("on");
           $(this).addClass("on");
