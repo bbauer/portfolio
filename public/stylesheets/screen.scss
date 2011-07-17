@@ -191,7 +191,7 @@ header {
 		border-bottom:1px solid #e6e6e6;
 	}
 	.content {
-		padding:55px 0 50px 0;
+		padding:55px 0 20px 0;
 	}
 	h2 {
 		font-family: 'Dancing Script', cursive;
@@ -231,6 +231,10 @@ header {
 			background:#d6d6d6;
 			width:204px;
 			height:150px;
+			-webkit-border-radius:4px;
+		  -moz-border-radius:4px;
+		  -o-border-radius:4px;
+		  border-radius:4px;
 		}
 		h3 {
 			font-family:sans-serif;

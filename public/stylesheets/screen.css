@@ -183,7 +183,7 @@ header {
     background: #fff;
     border-bottom: 1px solid #e6e6e6; }
   #work .content {
-    padding: 55px 0 50px 0; }
+    padding: 55px 0 20px 0; }
   #work h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
@@ -218,7 +218,11 @@ header {
     #work article img {
       background: #d6d6d6;
       width: 204px;
-      height: 150px; }
+      height: 150px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px; }
     #work article h3 {
       font-family: sans-serif;
       font-size: 13px;
