@@ -440,7 +440,8 @@ footer {
   clear: both;
   color: #333;
   font-weight: normal;
-  background: url(/images/ui-body-bg.jpg) left bottom repeat-x black; }
+  background: url(/images/ui-body-bg-invert.jpg) left top repeat-x black;
+  border-top: 1px solid #000; }
   footer .content {
     padding: 20px 0; }
 
