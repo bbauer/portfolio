@@ -31,7 +31,6 @@ em {
   -o-border-radius:5px;
   border-radius:5px;
   color:#fff;
-
 }
 header, footer, aside, nav, section, article { display:block; }
 
@@ -107,22 +106,37 @@ header {
 	min-height: 750px;
 	height: auto !important;
 	height: 750px;
-	background: url(../images/ui-header-bg-sharp.png) 0 0 repeat-x #eeeeee;
+	background-image:url(/images/ui-header-bg-blue.jpg), url(/images/ui-header-bg-new.png);
+	background-position: center top, left top;
+	background-repeat:no-repeat, repeat-x;
+	background-color:#ecece9;
 	padding:0; margin:0;
 	.content { 
 		/*background:url(../images/ui-header-tape.png) 0 -35px no-repeat;*/
 	}
 	h1 { 
 		font-family: 'Dancing Script', cursive; 
-		font-size:80px; text-align:center; 
-		color:#111;
+		font-size:95px; text-align:center; 
+		color:#b6eeff;
 		padding:100px 0 0 0; margin:0; 
-		text-shadow:1px 1px 0 #fff;
+		// text-shadow:1px 1px 0 #fff;
+		text-shadow:2px 2px 1px #004a60;
 		span { 
-			color:#999; 
+			color:#fff; 
+			// padding:5px 5px; 
+			// width:140px;
+			// display:inline-block;
+			// font-style:normal;
+			// -webkit-border-radius:10px;
+			// 		  -moz-border-radius:10px;
+			// 		  -o-border-radius:10px;
+			// 		  border-radius:10px;
+			// 		  background:#ee0d00;
+			// background: -webkit-gradient(linear, left top, left bottom, from(#ee0d00), to(#ac1e12));
+			// 		  background: -moz-linear-gradient(top, #ee0d00, #ac1e12);
 		}
 	}
-	img { margin:-15px 0 0 -40px; }
+	img { margin:25px 0 0 -30px; }
 }
 
 /* ---------------[  About Panel  ]--------------- */
@@ -130,7 +144,7 @@ header {
 #about { 
 	background:#fff;
 	padding-bottom:20px;
-	margin-top:-17px;
+	margin-top:0;
 	.header {
 		width:100%; height:50px;
 		background:#ebece9;
@@ -146,14 +160,14 @@ header {
 	}
 	h2 {
 		font-family: 'Dancing Script', cursive;
-		font-size:60px;
+		font-size:70px;
 		float:left;
 		color:#222;
-		margin:38px 0 0 30px;
+		margin:38px 0 0 5px;
 	}
 	img {
 		position:absolute;
-		top:140px; left:0;
+		top:158px; left:0;
 	}
 	.abstract {
 		font-family:sans-serif;
