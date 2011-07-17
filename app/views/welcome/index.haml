@@ -17,16 +17,17 @@
 %section#about.panel
   .header
   .content
-    %h2 
-      Who Am I?
-    = image_tag('ui-about.png', :alt => 'Design + Code = Awesome!')
+    .h2
+      %h2 
+        Who Am I?
+      = image_tag('ui-about-trans.png', :alt => 'Design + Code = Awesome!')
     .abstract
       %p 
         %strong I'm Brian Bauer
       %p 
         I'm a designer and 
         %em Ruby on Rails 
-        developer striving to create beautiful user-interfaces backed by beautiful code.  I live and work in Bend, OR, where I try to sneak in
+        developer striving to create beautiful user-interfaces backed by beautiful code.  I live and work in Bend, OR, where I try to sneak 
         %em HTML5
         and
         %em CSS3
@@ -77,20 +78,3 @@
         PHP
       %li.asp.last
         ASP
-#contact_header
-%section#contact.panel
-  .content
-    %h2 Contact Me
-    - form_tag('/email', :id => 'contact_form') do
-      /= label :email, :name, "Name:"
-      = text_field :email, :name, :placeholder => "Your Name"
-      %br/
-      /= label :email, :address, "Address:"
-      = text_field :email, :address, :class => 'required email', :placeholder => "Your Email Address"
-      %br/
-      /= label :email, :subject, "Subject:"
-      = text_field :email, :subject, :placeholder => "Subject"
-      %br/
-      = text_area :email, :body, :rows => 8, :cols => 50
-      %br/
-      = submit_tag "Send", :id => 'submit_email'

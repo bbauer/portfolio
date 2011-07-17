@@ -1,0 +1,37 @@
+%nav
+  %ul#navigation.interior
+    %li
+      %a{:class => 'on', :href => '/'} Home
+    %li
+      %a{:class => 'last', :href => '#contact_header'} Contact Me
+%header.panel.interior
+%section#work.panel.interior
+  .header
+  .content.interior
+    %h2= @article.title
+    = image_tag("#{@article.screenshot}", :alt => "#{@article.title}")
+    %article
+      .icons
+        - icons(@article).each do |icon|
+          %div{:class => "icon #{icon}"}
+    %p= @article.description
+    %ul
+      %li.title Tech Key:
+      %li.ruby
+        Ruby/Rails
+      %li.css
+        CSS3
+      %li.sass
+        SASS
+      %li.html
+        HTML5
+      %li.haml
+        HAML
+      %li.jquery
+        jQuery
+      %li.mootools
+        MooTools
+      %li.php
+        PHP
+      %li.asp.last
+        ASP

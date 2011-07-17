@@ -57,6 +57,9 @@ nav {
 		// 	  -webkit-box-shadow: 1px 1px 3px #ccc;
 		// 	  box-shadow: 1px 1px 3px #ccc;
 	}
+	.interior {
+		margin-left:-130px;
+	}
 	li { 
 		float:left;
 		a { 
@@ -139,17 +142,24 @@ header {
 	img { margin:25px 0 0 -30px; }
 }
 
+header.interior {
+	min-height:100px;
+	height:100px;
+}
+
 /* ---------------[  About Panel  ]--------------- */
 	
 #about { 
-	background:#fff;
+	background:#eee;
 	padding-bottom:20px;
 	margin-top:0;
 	.header {
 		width:100%; height:50px;
 		background:#ebece9;
+		background: -webkit-gradient(linear, left top, left bottom, from(#ebece9), to(#ddd));
+	  background: -moz-linear-gradient(top, #ebece9, #ddd);
 		margin-bottom:20px;
-		border-bottom:1px solid #d6d6d6;
+		border-bottom:1px solid #ccc;
 	}
 	.content { 
 		position:relative; 
@@ -158,24 +168,49 @@ header {
 			line-height:28px;
 		}
 	}
-	h2 {
-		font-family: 'Dancing Script', cursive;
-		font-size:70px;
+	.h2 {
+		width:500px;
 		float:left;
-		color:#222;
-		margin:38px 0 0 5px;
-	}
-	img {
-		position:absolute;
-		top:158px; left:0;
+		margin-top:25px;
+		color:#aaa;
+		background:url(/images/ui-about-bg.jpg) center no-repeat #fff; 
+	  -webkit-border-radius:10px 0 0 10px;
+	  -moz-border-radius:10px 0 0 10px;
+	  -o-border-radius:10px 0 0 10px;
+	  border-radius:10px 0 0 10px;
+	  padding:30px 35px;
+	  h2 {
+			font-family: 'Dancing Script', cursive;
+			font-size:70px;
+			float:left;
+			color:#222;
+			margin:0 0 0 50px;
+		}
+		img {
+			margin-top:5px;
+		}	
 	}
 	.abstract {
 		font-family:sans-serif;
-		width:540px;
-		float:right;
-		padding:0 0 20px 40px;
-		margin-top:45px;
-		color:#555;
+		width:480px;
+		float:left;
+		margin-top:25px;
+		color:#ccc;
+		background:#000; 
+		background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#000));
+	  background: -moz-linear-gradient(top, #444, #000);
+	  -webkit-border-radius:0 10px 10px 0;
+	  -moz-border-radius:0 10px 10px 0;
+	  -o-border-radius:0 10px 10px 0;
+	  border-radius:0 10px 10px 0;
+	  padding:30px 35px 30px 37px;
+	  strong {
+		  color:#fff;
+		  font-size:18px;
+	  }
+	  a strong {
+		  color:#b6eeff;
+	  }
 	}
 }
 
@@ -187,8 +222,8 @@ header {
   background: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
 	.header {
 		width:100%; height:47px;
-		background:#fff;
-		border-bottom:1px solid #e6e6e6;
+		background:#eee;
+		border-bottom:1px solid #ddd;
 	}
 	.content {
 		padding:55px 0 20px 0;
@@ -353,6 +388,48 @@ header {
 	}
 }
 
+#work.interior {
+	.header {
+		height:25px;
+	}
+	.content {
+		text-align:center;
+		padding:35px 0 20px 0;
+	}
+	img {
+		border:1px solid #bbb;
+	}
+}
+
+#details { 
+	background:#e6e6e6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e6e6e6));
+  background: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
+	.header {
+		width:100%; height:47px;
+		background:#eee;
+		border-bottom:1px solid #ddd;
+	}
+	.content {
+		padding:55px 0 20px 0;
+		text-align:center;
+	}
+	h2 {
+		font-family: 'Dancing Script', cursive;
+		font-size:50px;
+		margin-bottom:35px;
+		text-align:center;
+		text-shadow:1px 1px 0 #fff;
+	}
+	img {
+		-moz-box-shadow: 2px 2px 3px #bbb;
+		-webkit-box-shadow: 2px 2px 3px #bbb;
+		box-shadow: 2px 2px 3px #bbb;
+		border:1px solid #bbb; 
+	}
+}
+
+
 /* ---------------[  Contact Panel  ]--------------- */
 
 #contact_header {
@@ -418,10 +495,13 @@ footer {
 	clear:both; 
 	color:#333;
 	font-weight:normal;
+	background:url(/images/ui-body-bg.jpg) left bottom repeat-x #000;
 	.content {
 		padding:20px 0;
 	}
 }
+
+
 
 /* ---------------[  Shadowbox  ]--------------- */
 
