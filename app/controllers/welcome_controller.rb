@@ -1,5 +1,4 @@
-clast
-:es WelcomeController < ApplicationController
+class WelcomeController < ApplicationController
   def index
     @articles = Article.all
   end
