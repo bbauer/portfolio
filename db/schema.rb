@@ -10,17 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110714230608) do
+ActiveRecord::Schema.define(:version => 20111019023729) do
 
   create_table "active_admin_comments", :force => true do |t|
-    t.integer  "resource_id",   :null => false
-    t.string   "resource_type", :null => false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "namespace"
+    t.integer   "resource_id",   :null => false
+    t.string    "resource_type", :null => false
+    t.integer   "author_id"
+    t.string    "author_type"
+    t.text      "body"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "namespace"
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
@@ -28,39 +28,61 @@ ActiveRecord::Schema.define(:version => 20110714230608) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "admin_users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                                 :default => "", :null => false
+    t.string    "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                         :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "articles", :force => true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.string   "thumb"
-    t.string   "screenshot"
-    t.string   "rails"
-    t.string   "php"
-    t.string   "asp"
-    t.string   "html5"
-    t.string   "css3"
-    t.string   "haml"
-    t.string   "sass"
-    t.string   "jquery"
-    t.string   "mootools"
-    t.integer  "position"
-    t.text     "description"
+    t.string    "title"
+    t.string    "url"
+    t.string    "thumb"
+    t.string    "screenshot"
+    t.string    "rails"
+    t.string    "php"
+    t.string    "asp"
+    t.string    "html5"
+    t.string    "css3"
+    t.string    "haml"
+    t.string    "sass"
+    t.string    "jquery"
+    t.string    "mootools"
+    t.integer   "position"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
+  create_table "case_studies", :force => true do |t|
+    t.text     "content"
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "case_studies", ["slug"], :name => "index_case_studies_on_slug", :unique => true
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,13 @@
+%nav
+  %ul#navigation.interior
+    %li
+      %a{:class => 'on', :href => '/'} Home
+    %li
+      %a{:class => 'last', :href => '#contact_header'} Contact Me
+%header.panel.interior
+%section#work.panel.interior
+  .header
+  .content.interior
+    %h2= @case_study.name
+    %p= @case_study.content
+    

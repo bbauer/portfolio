@@ -55,6 +55,14 @@ em {
 header, footer, aside, nav, section, article {
   display: block; }
 
+#sticker {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: url(/images/ui-sticker.png) no-repeat;
+  width: 97px;
+  height: 99px; }
+
 /* ---------------[  Navigation  ]--------------- */
 nav ul {
   position: fixed;
@@ -218,7 +226,7 @@ header.interior {
     font-size: 50px;
     margin-bottom: 35px;
     text-align: center;
-    text-shadow: 1px 1px 0 #fff; }
+    text-shadow: 2px 2px 0 #fff; }
   #work #articles {
     width: 1153px;
     margin-left: 0;

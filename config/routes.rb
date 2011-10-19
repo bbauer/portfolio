@@ -1,5 +1,7 @@
 Brianbauer::Application.routes.draw do
   
+  resources :case_studies
+
   resources :categories
 
   resources :tags
