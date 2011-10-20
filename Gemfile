@@ -5,6 +5,7 @@ gem 'sass', '3.1.4'
 gem 'haml', '3.1.2'
 gem 'activeadmin'
 gem "friendly_id", "~> 4.0.0.beta14"
+gem "ckeditor"
 
 
 # Bundle edge Rails instead:

@@ -6,6 +6,8 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "Brianbauer"
+  config.register_javascript "ckeditor/ckeditor.js"
+  config.register_javascript "ckeditor/contents.css"
 
 
   # == Default Namespace

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111019023729) do
+ActiveRecord::Schema.define(:version => 20111019035852) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer   "resource_id",   :null => false
@@ -66,25 +66,30 @@ ActiveRecord::Schema.define(:version => 20111019023729) do
   end
 
   create_table "case_studies", :force => true do |t|
-    t.text     "content"
-    t.string   "name"
-    t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text      "content"
+    t.string    "name"
+    t.string    "slug"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "wireframe"
+    t.string    "oldpage"
+    t.string    "image01"
+    t.string    "image02"
+    t.string    "image03"
   end
 
   add_index "case_studies", ["slug"], :name => "index_case_studies_on_slug", :unique => true
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.integer  "article_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.integer   "article_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "tags", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
 end
