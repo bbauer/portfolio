@@ -83,7 +83,8 @@ nav ul {
   background: -webkit-gradient(linear, left top, left bottom, from(#ee0d00), to(#ac1e12));
   background: -moz-linear-gradient(top, #ee0d00, #ac1e12); }
 nav .interior {
-  margin-left: -130px; }
+  margin-left: -180px;
+  position: absolute; }
 nav li {
   float: left; }
   nav li a {
@@ -272,6 +273,25 @@ header.interior {
       float: left; }
       #work article h3 a {
         font-size: 12px; }
+  #work .interior {
+    padding-top: 30px; }
+    #work .interior p {
+      color: #555;
+      margin-bottom: 18px;
+      text-shadow: 1px 1px 0 #fff; }
+    #work .interior .header {
+      height: 25px; }
+    #work .interior .content {
+      text-align: left;
+      padding: 35px 0 20px 0; }
+    #work .interior #articles {
+      margin-left: 239px;
+      border-bottom: none; }
+    #work .interior article h3 {
+      text-align: center;
+      float: none; }
+    #work .interior .case_study {
+      text-align: center; }
   #work .icons {
     float: right;
     width: 110px;
@@ -361,14 +381,6 @@ header.interior {
     background: -webkit-gradient(linear, left top, left bottom, from(#eb56cd), to(#b1419b));
     background: -moz-linear-gradient(top, #eb56cd, #b1419b);
     text-shadow: -1px -1px 0 #92357f; }
-
-#work.interior .header {
-  height: 25px; }
-#work.interior .content {
-  text-align: center;
-  padding: 35px 0 20px 0; }
-#work.interior img {
-  border: 1px solid #bbb; }
 
 #details {
   background: #e6e6e6;

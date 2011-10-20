@@ -64,7 +64,8 @@ nav {
 		// 	  box-shadow: 1px 1px 3px #ccc;
 	}
 	.interior {
-		margin-left:-130px;
+		margin-left:-180px; 
+		position:absolute;
 	}
 	li { 
 		float:left;
@@ -290,6 +291,34 @@ header.interior {
 			a { font-size:12px; }
 		}
 	}
+	.interior {
+		padding-top:30px;
+		p { 
+			color:#555; 
+			margin-bottom:18px;
+			text-shadow:1px 1px 0 #fff; 
+		}
+		.header {
+			height:25px;
+		}
+		.content {
+			text-align:left;
+			padding:35px 0 20px 0;
+		}
+		#articles {
+			margin-left:239px;
+			border-bottom:none;
+		}
+		article {
+			h3 {
+				text-align:center;
+				float:none;
+			} 
+		}
+		.case_study {
+			text-align:center;
+		}
+	}
 	.icons {
 		float:right;
 		width:110px;
@@ -391,19 +420,6 @@ header.interior {
 		background: -webkit-gradient(linear, left top, left bottom, from(#eb56cd), to(#b1419b));
 	  background: -moz-linear-gradient(top, #eb56cd, #b1419b);
 	  text-shadow:-1px -1px 0 #92357f;
-	}
-}
-
-#work.interior {
-	.header {
-		height:25px;
-	}
-	.content {
-		text-align:center;
-		padding:35px 0 20px 0;
-	}
-	img {
-		border:1px solid #bbb;
 	}
 }
 

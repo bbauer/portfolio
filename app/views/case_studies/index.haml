@@ -1,0 +1,20 @@
+%nav
+  %ul#navigation.interior
+    %li
+      %a{:href => '/'} Home
+    %li
+      %a{:class => 'on', :href => '/case_studies'} Case Studies
+    %li
+      %a{:class => 'last', :href => '#contact_header'} Contact Me
+%header.panel.interior
+%section#work.panel.interior
+  .header
+  .content.interior
+    #articles
+      - @case_studies.each do |study|
+        %article
+          %a{:class => "view", :href => "/case_studies/#{study.slug}"}
+            View Project
+          = image_tag("#{study.image03.blank? ? "/images/work-blank-thumb.png" : study.image03}", :alt => "#{study.name}")
+          %h3 
+            = study.name

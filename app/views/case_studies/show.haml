@@ -1,7 +1,9 @@
 %nav
   %ul#navigation.interior
     %li
-      %a{:class => 'on', :href => '/'} Home
+      %a{:href => '/'} Home
+    %li
+      %a{:href => '/case_studies'} Case Studies
     %li
       %a{:class => 'last', :href => '#contact_header'} Contact Me
 %header.panel.interior
@@ -9,5 +11,5 @@
   .header
   .content.interior
     %h2= @case_study.name
-    %p= @case_study.content.html_safe
+    .case_study= @case_study.content.html_safe
     
